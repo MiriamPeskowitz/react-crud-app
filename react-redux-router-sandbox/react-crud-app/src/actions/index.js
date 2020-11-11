@@ -42,7 +42,7 @@ export const addArticle = ({ title, content}) =>  {
 
 export const getArticle = (id) => {
   return(dispatch) => {
-    return axios.get(`${apiURL}/{id}.json`)
+    return axios.get(`${apiURL}/${id}.json`)
     .then(response => {
       dispatch({
         type: "RECEIVE_ARTICLE",
@@ -58,7 +58,7 @@ export const getArticle = (id) => {
 
 export const deleteArticle = (id) => {
   return(dispatch) => {
-    return axios.delete(`${apiURL}/{id}.json`)
+    return axios.delete(`${apiURL}/${id}.json`)
     .then(response => {
       dispatch({
         type: "REMOVE_ARTICLE",
